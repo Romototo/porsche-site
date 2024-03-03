@@ -1,0 +1,29 @@
+.container {
+    padding-right: 100px;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: $screen-width-max;
+    margin: 0 auto;
+}
+
+html {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 8rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}

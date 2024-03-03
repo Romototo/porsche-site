@@ -1,0 +1,85 @@
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+
+    height: 100dvh;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 15px;
+
+        box-shadow: -5px 0px 20px 0px rgba(0, 0, 0, 0.25);
+        background: rgb(255, 255, 255);
+    }
+
+    &__item {
+        position: relative;
+
+        &:first-of-type::before {
+            content: "Главная";
+        }
+
+        &:nth-of-type(2):before {
+            content: "История";
+        }
+
+        &:nth-of-type(3):before {
+            content: "Этапы";
+        }
+
+        &:last-of-type::before{
+            content: "Модели";
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: 100%;
+
+            transform: translateY(-50%);
+
+            width: 0;
+
+            background-color: white;
+
+            overflow: hidden;
+
+            transition: width 0.3s ease-out, color 0.3s ease-out, backgorund-color 0.3s ease-out,;
+        }
+
+        &:hover {
+            &::before {
+                padding: 15px 55px;
+
+                border: 1px solid black;
+                background-color: $accent-color;
+                color: white;
+
+                width: 200px;
+            }
+
+            img {
+                background-color: $accent-color;
+                scale: 0.8;
+            }
+        }
+    }
+
+
+    &__img {
+        width: 70px;
+
+        transition: background-color 0.2s ease,
+                    scale 0.2s ease;
+    }
+}
+
