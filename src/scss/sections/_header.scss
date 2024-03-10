@@ -31,9 +31,10 @@
     &__title {
         letter-spacing: 0.66em;
         text-transform: uppercase;
-        text-align: center;
+        text-align: right;
 
         cursor: default;
+        color: rgb(120, 120, 120);
     }
 
     &__button {

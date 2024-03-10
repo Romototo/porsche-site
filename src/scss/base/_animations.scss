@@ -1,0 +1,17 @@
+@keyframes picture-change{
+    0%{
+        left: 0;
+    }
+
+    33%{
+        left: -100%;
+    }
+
+    66%{
+        left: -200%;
+    }
+
+    100%{
+        left: -300%;
+    }
+}

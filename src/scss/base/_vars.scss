@@ -2,5 +2,23 @@
 $screen-width-max: 1920;
 $screen-width-min: 280;
 
+// Grid size
+$container-width: 1440px;
+$grid-gap: 20px;
+
 // Colors
 $accent-color: #8d4545;
+
+$text-color: #787878;
+$text-second-color: #000000;
+
+$title-color: #000000;
+
+// Border
+$border: 1px solid black;
+
+// Fonts
+$font-main: 'Cormorant Infant', Arial, sans-serif;
+
+// Fonts size
+$font-size-base: 25px;

@@ -1,0 +1,35 @@
+.history{
+   width: 100%;
+   min-height: 700px;
+   padding: 100px 0;
+
+    .container{
+        border: $border;
+
+        display: flex;
+
+        &>*{
+            width: 50%;
+        }
+    }
+
+    .picture {
+        height: 600px;
+        overflow: hidden;
+        position: relative;
+
+        &__list {
+            display: flex;
+
+            width: 400%;
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            animation: picture-change 8s linear 0s infinite;
+        }
+    }
+    
+}
+
