@@ -410,8 +410,8 @@ h3 {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-animation: picture-change 25s linear 0s infinite;
-          animation: picture-change 25s linear 0s infinite;
+  -webkit-animation: picture-change 50s linear 0s infinite;
+          animation: picture-change 50s linear 0s infinite;
 }
 
 .dates .container {
@@ -449,8 +449,8 @@ h3 {
   gap: 15px;
   font-size: 50px;
   position: relative;
-  -webkit-animation: data-change 10s ease-in-out 1s infinite;
-          animation: data-change 10s ease-in-out 1s infinite;
+  -webkit-animation: data-change 25s ease-in-out 1s infinite;
+          animation: data-change 25s ease-in-out 1s infinite;
 }
 .dates__precept {
   color: #787878;
@@ -481,7 +481,18 @@ h3 {
 .models__content {
   width: 100%;
 }
+.models__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
 .models__item {
+  position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -489,9 +500,52 @@ h3 {
 .models__item:nth-of-type(2n + 1) {
   margin-left: auto;
 }
-.models__item:nth-of-type(2n + 1)::before {
-  content: "hello";
+.models__item:nth-of-type(2n + 1) .models__description {
+  left: -50%;
 }
-.models__item:nth-of-type(2n)::after {
-  content: "bye";
+.models__item:nth-of-type(2n) .models__description {
+  right: -50%;
+}
+.models__description {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 70%;
+  max-height: 80%;
+  padding: 45px 60px;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 10px black;
+          box-shadow: 1px 1px 10px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.models__description::after, .models__description::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background-color: black;
+}
+.models__description::after {
+  top: 0;
+  right: 0;
+}
+.models__description::before {
+  bottom: 0;
+  left: 0;
+}
+.models__car-history {
+  color: #787878;
+}
+.models__car-history::first-letter {
+  color: black;
+  font-size: 35px;
+  font-weight: 700;
 }

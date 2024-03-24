@@ -1,0 +1,74 @@
+.models {
+    width: 100%;
+    padding: 100px 0;
+
+    .container {
+        border: $border;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 90px;
+    }
+
+    &__content {
+        width: 100%;
+    }
+
+    &__item {
+        position: relative;
+        
+        width: fit-content;
+
+        &::before, &::after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            
+            width: 70%;
+            max-height: 80%;
+
+            padding: 45px 60px;
+
+            background-color: #fff;
+            
+            white-space: pre-wrap;
+
+            box-shadow: 1px 1px 10px black;
+        }
+
+        &:nth-of-type(2n + 1) {
+            margin-left: auto;
+
+            &::before {
+                left: -50%;
+            }
+        }
+
+        &:first-of-type::before {
+            content: "Porsche 365" '\00000a' "Первый серийный автомобиль Porsche.";
+        }
+
+        &:nth-of-type(3)::before {
+            content: 'Porsche Carrera GT' '\00000a' 'Автомобиль был некоторое время быстрейшим серийным автомобилем Северной Петли Нюрбургринга - 7 минут 28 секунд. Этот результат был побит суперкаром Pagani Zonda F..';
+        }
+
+        &:nth-of-type(2n) {
+            &::after {
+                right: -50%;
+            }
+        }
+
+        &:nth-of-type(2)::after {
+            content: 'Porsche 911' '\00000a' 'Более мощный, комфортабельный и современный преемник модели 356. Изначально назывался Porsche 901. Но у компании Peugeot были эксклюзивные права во Франции на имена машин, образованных тремя цифрами с нулём посередине. В итоге Porsche изменили название на 911.';
+        }
+
+        &:nth-of-type(4)::after {
+            content: 'Porsche Tycan' '\00000a' 'Первый серийный электрокар от Порше.';
+        }
+    }
+}

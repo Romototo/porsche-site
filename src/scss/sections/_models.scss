@@ -1,0 +1,97 @@
+.models {
+    width: 100%;
+    padding: 100px 0;
+
+    .container {
+        border: $border;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 90px;
+    }
+
+    &__content {
+        width: 100%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__item {
+        position: relative;
+        
+        width: fit-content;
+
+        &:nth-of-type(2n + 1) {
+            margin-left: auto;
+
+            .models__description {
+                left: -50%;
+            }
+        }
+
+        &:nth-of-type(2n) {
+            .models__description {
+                right: -50%;
+            }
+        }
+    }
+
+    &__description {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        width: 70%;
+        max-height: 80%;
+
+        padding: 45px 60px;
+
+        background-color: #fff;
+
+        box-shadow: 1px 1px 10px black;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &::after, &::before {
+            content: '';
+
+            position: absolute;
+
+            width: 50%;
+            height: 3px;
+
+            background-color: black;
+        }
+
+        &::after {
+            top: 0;
+            right: 0;
+        }
+
+        &::before {
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__car-history {
+        color: $text-color;
+
+        &::first-letter{
+            color: black;
+            font-size: 35px;
+            font-weight: 700;
+        }
+    }
+}
