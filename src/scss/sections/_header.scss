@@ -1,4 +1,4 @@
-.header{
+.header {
     position: relative;
     overflow: hidden;
 
@@ -6,11 +6,11 @@
     height: 100dvh;
 
     &:hover {
-        .header__top-half{
+        .header__top-half {
             transform: translateY(-90%);
         }
 
-        .header__bottom-half{
+        .header__bottom-half {
             transform: translateY(90%);
         }
     }
@@ -23,7 +23,8 @@
         height: 100%;
     }
 
-    &__title, &__button {
+    &__title,
+    &__button {
         position: relative;
         z-index: 10;
     }
@@ -50,14 +51,14 @@
 
         border-radius: 20px;
         background: rgb(141, 69, 69);
-        
-        transition: scale 0.1s ease,
-                    background 0.1s ease;
+
+        transition: scale 0.1s ease;
+        background: 0.1s ease;
 
         &:hover {
             scale: 1.2;
             background: #974e4e;
-            
+
         }
 
         &::before {
@@ -66,7 +67,7 @@
             right: 96%;
             top: 0;
         }
-        
+
         &::after {
             content: url('../img/after-btn.png');
             position: absolute;
@@ -86,16 +87,17 @@
         object-fit: cover;
     }
 
-    &__top-half, &__bottom-half {
+    &__top-half,
+    &__bottom-half {
         height: 50%;
         width: 100%;
-        
+
         background: #fff;
 
         position: absolute;
         z-index: 2;
         left: 0;
-        
+
         transition: transform 0.3s ease-in;
     }
 
@@ -107,5 +109,3 @@
         top: 50%;
     }
 }
-
-

@@ -8,7 +8,7 @@
     margin: 0 auto;
 }
 
-.section-title{
+.section-title {
     color: $title-color;
 
     &::first-letter{
@@ -16,7 +16,7 @@
     }
 }
 
-.section-text{
+.section-text {
     color: $text-color;
 
     &::first-line{
