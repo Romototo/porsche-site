@@ -10,14 +10,16 @@
 
 .section-title {
     color: $title-color;
+    font-size: adaptive-font-size(2rem, 0.8rem);
 
-    &::first-letter{
-        font-size: 4rem;
+    &::first-letter {
+        font-size: adaptive-font-size(4rem, 1.3rem);
     }
 }
 
 .section-text {
     color: $text-color;
+    font-size: adaptive-font-size(1rem, 0.7rem);
 
     &::first-line{
         color: $text-second-color;
@@ -31,7 +33,7 @@ html {
 }
 
 h1 {
-    font-size: 8rem;
+    font-size: adaptive-font-size(8rem, 1.2rem);
     font-weight: 300;
 }
 
@@ -43,4 +45,9 @@ h2 {
 h3 {
     font-size: 2rem;
     font-weight: 400;
+}
+
+section {
+    overflow: hidden;
+    padding: 0 25px;
 }

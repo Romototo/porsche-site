@@ -5,6 +5,14 @@
     z-index: 1000;
 
     height: 100dvh;
+    
+    @media screen and (max-width: 1075px) {
+        right: none;
+        left: 0;
+
+        width: 100dvw;
+        height: auto;
+    }
 
     &__list {
         display: flex;
@@ -19,10 +27,22 @@
 
         box-shadow: -5px 0px 20px 0px rgba(0, 0, 0, 0.25);
         background: rgb(255, 255, 255);
+
+        @media screen and (max-width: 1075px) {
+            flex-direction: row;
+
+            &::first-child {
+                margin-right: auto;
+            }
+        }    
     }
 
     &__item {
-        position: relative;
+        position: relative;  
+
+        &:first-of-type {
+            margin-right: auto;
+        }
 
         &:first-of-type::before {
             content: "Главная";
@@ -53,7 +73,11 @@
 
             overflow: hidden;
 
-            transition: width 0.3s ease-out, color 0.3s ease-out, backgorund-color 0.3s ease-out,;
+            transition: width 0.3s ease-out, color 0.3s ease-out, backgorund-color 0.3s ease-out;
+
+            @media screen and (max-width: 1075px) {
+                display: none;
+            } 
         }
 
         &:hover {

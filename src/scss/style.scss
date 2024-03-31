@@ -1,6 +1,9 @@
 // Variables
 @import "./base/vars";
 
+// Utils
+@import "./utils/functions";
+
 // Base
 @import "./base/reset";
 @import "./base/fonts";
@@ -15,3 +18,4 @@
 @import "./sections/history";
 @import "./sections/dates";
 @import "./sections/models";
+@import "./sections/footer"
